@@ -1,0 +1,12 @@
+{
+  "name": "upndown-cluster-01",
+  "region": "tor1",
+  "version": "latest",
+  "node_pools": [
+    {
+      "size": "s-2vcpu-4gb",
+      "count": 3,
+      "name": "upndown-pool"
+    }
+  ]
+}
