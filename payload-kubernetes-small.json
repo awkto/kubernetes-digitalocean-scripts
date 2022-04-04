@@ -1,0 +1,12 @@
+{
+  "name": "kubelab-cluster-small",
+  "region": "tor1",
+  "version": "latest",
+  "node_pools": [
+    {
+      "size": "s-1vcpu-2gb",
+      "count": 2,
+      "name": "kubelab-node-pool"
+    }
+  ]
+}
