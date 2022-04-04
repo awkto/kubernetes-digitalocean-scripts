@@ -3,8 +3,8 @@
 #fetch token from local file
 DTOKEN=$(cat .apikey)
 
-#list all 1-CLICK applications
-curl -s -X GET "https://api.digitalocean.com/v2/1-clicks" \
+#list all DROPLETs for your account
+curl -s -X GET "https://api.digitalocean.com/v2/droplets" \
 	-H "Authorization: Bearer $DTOKEN" \
 	| jq .
 

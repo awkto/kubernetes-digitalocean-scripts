@@ -4,7 +4,7 @@
 DTOKEN=$(cat .apikey)
 PAYLOAD=$1
 
-#authenticate
+#create the kubernetes cluster based on the PAYLOAD json file for specs
 curl -s -X POST "https://api.digitalocean.com/v2/kubernetes/clusters" \
 	-H "Authorization: Bearer $DTOKEN" \
 	-H "Content-Type: application/json" \
