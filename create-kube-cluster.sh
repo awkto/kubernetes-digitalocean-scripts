@@ -11,6 +11,6 @@ curl -s -X POST "https://api.digitalocean.com/v2/kubernetes/clusters" \
 	-d @$PAYLOAD \
 	| jq . | tee .kube-cluster-json | jq .
 
-echo "Cluster ID is : "$(cat .kube-cluster-json | jq .kubernetes_cluster.id | tee .kube-cluster-id)
+echo "Cluster ID is : "$(cat .kube-cluster-json | jq -r .kubernetes_cluster.id | tee .kube-cluster-id)
 
 
