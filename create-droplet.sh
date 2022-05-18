@@ -22,11 +22,11 @@ PAYLOAD_OUT=$(echo $PAYLOAD_IN | sed "s/$SSH_ID_HOOK/$SSH_KEY_ID/g")
 echo $PAYLOAD_OUT
 
 #this creates the DROPLET
-#curl -s -X POST "https://api.digitalocean.com/v2/droplets" \
-#	-H "Authorization: Bearer $DTOKEN" \
-#	-H "Content-Type: application/json" \
-#	-d "$PAYLOAD_OUT" \
-#	| jq .
+curl -s -X POST "https://api.digitalocean.com/v2/droplets" \
+	-H "Authorization: Bearer $DTOKEN" \
+	-H "Content-Type: application/json" \
+	-d "$PAYLOAD_OUT" \
+	| jq .
 
 
 #NOTE : You can run this command afterwards to create the DNS entry
