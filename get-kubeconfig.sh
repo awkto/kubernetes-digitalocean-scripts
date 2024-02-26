@@ -8,5 +8,4 @@ KUBE_CLUSTER_ID=$1
 curl -s -X GET "https://api.digitalocean.com/v2/kubernetes/clusters/$KUBE_CLUSTER_ID/kubeconfig" \
 	-H "Authorization: Bearer $DTOKEN" \
 	-H "Content-Type: application/yaml" \
-	| tee .kubeconfig | tee ~/.kube/config
-
+	| tee ~/.kube/config | tee .kubeconfig
